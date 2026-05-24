@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEXTOS PRO 👑</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mouse-glow" id="mouseGlow"></div>
+  <canvas id="particlesCanvas"></canvas>
+
+  <section id="loginView" class="view active">
+    <div class="login-shell">
+      <h1>TEXTOS PRO 👑</h1>
+      <p>Acceso premium para creadores imparables</p>
+      <form id="loginForm" class="glass-panel">
+        <label>
+          Usuario
+          <input id="username" type="text" placeholder="Tu nombre" required />
+        </label>
+        <label>
+          Contraseña
+          <input id="password" type="password" placeholder="••••••••" required />
+        </label>
+        <button type="submit">Entrar al panel</button>
+        <div id="loginError" class="error-msg" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="appView" class="view">
+    <header class="app-header glass-panel">
+      <div>
+        <h2>TEXTOS PRO 👑</h2>
+        <p>Dashboard futurista de textos virales</p>
+      </div>
+      <div class="header-stats">
+        <span id="clock">00:00:00</span>
+        <span>Total: <strong id="totalCount">0</strong></span>
+        <span>Favoritos: <strong id="favCount">0</strong></span>
+      </div>
+    </header>
+
+    <section class="toolbar glass-panel">
+      <input id="searchInput" type="text" placeholder="Buscar por emoción, tema o palabra clave..." />
+      <div id="tabs" class="tabs"></div>
+    </section>
+
+    <main>
+      <div id="cardsGrid" class="cards-grid"></div>
+    </main>
+  </section>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
